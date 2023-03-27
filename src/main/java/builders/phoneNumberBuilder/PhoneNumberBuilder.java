@@ -2,7 +2,7 @@ package builders.phoneNumberBuilder;
 
 import tools.data.PhoneNumber;
 
-public class PhoneNumberBuilderV1 implements PhoneNumberBuilder {
+public class PhoneNumberBuilder implements BuildPhoneNumber {
     @Override
     public PhoneNumber createPhoneNumber(String[] fields) {
         PhoneNumber number = new PhoneNumber();
@@ -12,18 +12,18 @@ public class PhoneNumberBuilderV1 implements PhoneNumberBuilder {
         return number;
     }
 
-    private int tariffMinutes(int tariff){
-        switch (tariff){
-            case 3 : {
+    private int tariffMinutes(int tariff) {
+        switch (tariff) {
+            case 3: {
                 return 0;
             }
-            case 6 : {
+            case 6: {
                 return 300;
             }
-            case 11 : {
+            case 11: {
                 return 100;
             }
-            default : {
+            default: {
                 return 1;
             }
         }

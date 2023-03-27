@@ -5,31 +5,32 @@ import tools.data.PhoneNumber;
 
 import java.util.*;
 
-public class NumberStorageV1 implements NumberStorage{
-    private Map<PhoneNumber, List<Call>> storage;
+public class NumberStorage implements StoreNumber {
+    private final Map<PhoneNumber, List<Call>> storage;
 
-    public NumberStorageV1(){
+    public NumberStorage() {
         storage = new HashMap<>();
     }
+
     @Override
-    public boolean containsNumber(PhoneNumber number){
+    public boolean containsNumber(PhoneNumber number) {
         return storage.containsKey(number);
     }
 
     @Override
-    public void putNumber(PhoneNumber number, List<Call> calls){
+    public void putNumber(PhoneNumber number, List<Call> calls) {
         storage.put(number, calls);
     }
 
     @Override
-    public void addCall(PhoneNumber number, Call call){
+    public void addCall(PhoneNumber number, Call call) {
         List<Call> calls = storage.get(number);
         calls.add(call);
         storage.put(number, calls);
     }
 
     @Override
-    public Set<PhoneNumber> getNumbers(){
+    public Set<PhoneNumber> getNumbers() {
         return storage.keySet();
     }
 

@@ -2,7 +2,7 @@ package tools.data;
 
 import java.time.LocalDateTime;
 
-public class Call implements Comparable<Call>{
+public class Call implements Comparable<Call> {
     private int type;
     private LocalDateTime startTime;
     private LocalDateTime endTime;

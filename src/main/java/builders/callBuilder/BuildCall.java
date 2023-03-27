@@ -2,6 +2,6 @@ package builders.callBuilder;
 
 import tools.data.Call;
 
-public interface CallBuilder {
+public interface BuildCall {
     Call createCall(String[] fields);
 }

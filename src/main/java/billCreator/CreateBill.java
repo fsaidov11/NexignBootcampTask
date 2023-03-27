@@ -1,9 +1,7 @@
 package billCreator;
 
-import tools.numberStorage.NumberStorage;
+import tools.numberStorage.StoreNumber;
 
-import java.io.IOException;
-
-public interface BillCreator {
-    void createBills(NumberStorage storage);
+public interface CreateBill {
+    void createBills(StoreNumber storage);
 }

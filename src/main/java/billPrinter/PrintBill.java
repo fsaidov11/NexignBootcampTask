@@ -1,7 +1,5 @@
 package billPrinter;
 
-import java.io.IOException;
-
-public interface BillPrinter {
+public interface PrintBill {
     void printBill(String number, String bill);
 }

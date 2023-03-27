@@ -2,6 +2,6 @@ package builders.phoneNumberBuilder;
 
 import tools.data.PhoneNumber;
 
-public interface PhoneNumberBuilder {
+public interface BuildPhoneNumber {
     PhoneNumber createPhoneNumber(String[] fields);
 }
